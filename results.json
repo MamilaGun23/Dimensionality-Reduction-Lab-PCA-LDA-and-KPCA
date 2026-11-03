@@ -1,0 +1,47 @@
+{
+  "dataset": "UCI Wine via sklearn.datasets.load_wine",
+  "seed": 0,
+  "train_samples": 124,
+  "test_samples": 54,
+  "feature_names": [
+    "alcohol",
+    "malic_acid",
+    "ash",
+    "alcalinity_of_ash",
+    "magnesium",
+    "total_phenols",
+    "flavanoids",
+    "nonflavanoid_phenols",
+    "proanthocyanins",
+    "color_intensity",
+    "hue",
+    "od280/od315_of_diluted_wines",
+    "proline"
+  ],
+  "cv_folds": 5,
+  "checks": {
+    "pca_max_angle_radians": 1.1592115469745096e-15,
+    "lda_max_angle_radians": 1.1529511574758651e-15,
+    "kpca_max_gram_error": 3.941291737419306e-15
+  },
+  "models": [
+    {
+      "model": "Original (13 features)",
+      "cv_accuracy_mean": 0.9753333333333334,
+      "cv_accuracy_std": 0.03317294747899929,
+      "test_accuracy": 1.0
+    },
+    {
+      "model": "PCA (2)",
+      "cv_accuracy_mean": 0.9593333333333334,
+      "cv_accuracy_std": 0.03653917228278592,
+      "test_accuracy": 0.9259259259259259
+    },
+    {
+      "model": "LDA (2)",
+      "cv_accuracy_mean": 0.9756666666666666,
+      "cv_accuracy_std": 0.019877402021167435,
+      "test_accuracy": 1.0
+    }
+  ]
+}
